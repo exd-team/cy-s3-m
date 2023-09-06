@@ -1,0 +1,10 @@
+// ==UserScript==
+// @name         S3-M-H
+// @description  Combination of multiple Tampermonkey scripts
+// @namespace    http://tampermonkey.net/
+// @version      1
+// @grant        GM_registerMenuCommand
+// @match        https://www.speedtest.net/run
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// ==/UserScript==
+!function(){"use strict";var e,i;let t=/^https?:\/\/www\.speedtest\.net\/result\/\d+$/;e=setInterval(function d(){var n=document.querySelector("#container > div > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-connection > div > div.pure-u-5-12.u-c.result-item-container-align-right > div > div.ispComponent > div > div.result-label"),v=document.querySelector("#container > div > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-connection > div > div.pure-u-5-12.u-c.result-item-container-align-right > div > div.ispComponent > div > div.result-data");n.textContent="Cyta",v.textContent="212.31.126.209";var r=document.querySelector("#container > div > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div:nth-child(4) > div > div > div.pure-u-1-2.u-c.eot-info-test > div:nth-child(3) > div.result-label.js-data-isp"),a=document.querySelector("#container > div > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div:nth-child(4) > div > div > div.pure-u-1-2.u-c.eot-info-test > div:nth-child(3) > div.result-data.js-data-ip");i=window.location.href,t.test(i)&&(r.textContent="Cyta",a.textContent="212.31.126.209",clearInterval(e))},100)}();
